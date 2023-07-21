@@ -16,6 +16,8 @@
 		B8CED3DC2A6AE73B0090ED54 /* GlobalNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CED3DB2A6AE73B0090ED54 /* GlobalNewsAppTests.swift */; };
 		B8CED3E62A6AE73B0090ED54 /* GlobalNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CED3E52A6AE73B0090ED54 /* GlobalNewsAppUITests.swift */; };
 		B8CED3E82A6AE73B0090ED54 /* GlobalNewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CED3E72A6AE73B0090ED54 /* GlobalNewsAppUITestsLaunchTests.swift */; };
+		B8CED4212A6AEA950090ED54 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CED4202A6AEA950090ED54 /* Common.framework */; };
+		B8CED4232A6AEA950090ED54 /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CED4222A6AEA950090ED54 /* UIComponents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B8CED3E12A6AE73B0090ED54 /* GlobalNewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobalNewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CED3E52A6AE73B0090ED54 /* GlobalNewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNewsAppUITests.swift; sourceTree = "<group>"; };
 		B8CED3E72A6AE73B0090ED54 /* GlobalNewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B8CED4202A6AEA950090ED54 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CED4222A6AEA950090ED54 /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CED4212A6AEA950090ED54 /* Common.framework in Frameworks */,
+				B8CED4232A6AEA950090ED54 /* UIComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				B8CED3DA2A6AE73B0090ED54 /* GlobalNewsAppTests */,
 				B8CED3E42A6AE73B0090ED54 /* GlobalNewsAppUITests */,
 				B8CED3C22A6AE7390090ED54 /* Products */,
+				B8CED41F2A6AEA950090ED54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +134,15 @@
 			path = GlobalNewsAppUITests;
 			sourceTree = "<group>";
 		};
+		B8CED41F2A6AEA950090ED54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8CED4202A6AEA950090ED54 /* Common.framework */,
+				B8CED4222A6AEA950090ED54 /* UIComponents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +157,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B8CED41E2A6AE8E30090ED54 /* PBXTargetDependency */,
 			);
 			name = GlobalNewsApp;
 			productName = GlobalNewsApp;
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = B8CED3B82A6AE7390090ED54;
+			packageReferences = (
+				B8CED41C2A6AE8D90090ED54 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = B8CED3C22A6AE7390090ED54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +313,10 @@
 			isa = PBXTargetDependency;
 			target = B8CED3C02A6AE7390090ED54 /* GlobalNewsApp */;
 			targetProxy = B8CED3E22A6AE73B0090ED54 /* PBXContainerItemProxy */;
+		};
+		B8CED41E2A6AE8E30090ED54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B8CED41D2A6AE8E30090ED54 /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -602,6 +626,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8CED41C2A6AE8D90090ED54 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8CED41D2A6AE8E30090ED54 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8CED41C2A6AE8D90090ED54 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8CED3B92A6AE7390090ED54 /* Project object */;
 }
