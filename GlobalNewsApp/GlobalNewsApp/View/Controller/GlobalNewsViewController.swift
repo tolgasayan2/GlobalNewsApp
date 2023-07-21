@@ -22,7 +22,7 @@ final class GlobalNewsViewController: UIViewController {
     view.addSubview(tableView)
     setTableViewDelegates()
     tableView.layoutMargins = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    tableView.rowHeight = 240
+    tableView.rowHeight = 90
     tableView.allowsSelection = false
     registerNibs()
     tableView.pin(to: view)

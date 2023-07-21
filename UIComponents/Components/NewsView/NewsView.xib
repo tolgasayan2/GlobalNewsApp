@@ -4,31 +4,36 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsView" customModule="UIComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="tPD-At-EvY" id="jJR-HQ-NfI"/>
+                <outlet property="headerLabel" destination="hd8-tm-WC1" id="g7h-IL-Q5M"/>
+                <outlet property="infoLabel" destination="AG7-4S-Pa0" id="yMY-pZ-xyt"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="tPD-At-EvY" customClass="NewsView" customModule="UIComponents" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="tPD-At-EvY">
             <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBJ-qb-pfv">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-F5-7Mk">
-                            <rect key="frame" x="10" y="10" width="280" height="180"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-F5-7Mk">
+                            <rect key="frame" x="20" y="2" width="260" height="196"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABC News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd8-tm-WC1" userLabel="Header">
-                                    <rect key="frame" x="0.0" y="0.0" width="280" height="86"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="113"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                     <color key="textColor" systemColor="systemCyanColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG7-4S-Pa0" userLabel="Information">
-                                    <rect key="frame" x="0.0" y="94" width="280" height="86"/>
+                                    <rect key="frame" x="0.0" y="113" width="260" height="83"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -38,10 +43,10 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="dS8-F5-7Mk" firstAttribute="top" secondItem="dBJ-qb-pfv" secondAttribute="top" constant="10" id="DFO-bZ-t33"/>
-                        <constraint firstItem="dS8-F5-7Mk" firstAttribute="leading" secondItem="dBJ-qb-pfv" secondAttribute="leading" constant="10" id="m7b-9e-gVw"/>
-                        <constraint firstAttribute="bottom" secondItem="dS8-F5-7Mk" secondAttribute="bottom" constant="10" id="sAl-8M-eqe"/>
-                        <constraint firstAttribute="trailing" secondItem="dS8-F5-7Mk" secondAttribute="trailing" constant="10" id="wXK-0T-zS1"/>
+                        <constraint firstItem="dS8-F5-7Mk" firstAttribute="top" secondItem="dBJ-qb-pfv" secondAttribute="top" constant="2" id="DFO-bZ-t33"/>
+                        <constraint firstItem="dS8-F5-7Mk" firstAttribute="leading" secondItem="dBJ-qb-pfv" secondAttribute="leading" constant="20" id="m7b-9e-gVw"/>
+                        <constraint firstAttribute="bottom" secondItem="dS8-F5-7Mk" secondAttribute="bottom" constant="2" id="sAl-8M-eqe"/>
+                        <constraint firstAttribute="trailing" secondItem="dS8-F5-7Mk" secondAttribute="trailing" constant="20" id="wXK-0T-zS1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -54,10 +59,6 @@
                 <constraint firstItem="dBJ-qb-pfv" firstAttribute="top" secondItem="tPD-At-EvY" secondAttribute="top" id="tpA-pp-2O3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="headerLabel" destination="hd8-tm-WC1" id="SUH-GC-SHD"/>
-                <outlet property="infoLabel" destination="AG7-4S-Pa0" id="DSe-QA-Kuo"/>
-            </connections>
             <point key="canvasLocation" x="535" y="18"/>
         </view>
     </objects>
