@@ -19,6 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     //MARK: Setup NavigationController
     let navigationController = UINavigationController(rootViewController: GlobalNewsViewController())
     navigationController.navigationBar.preferredBehavioralStyle = .automatic
+    navigationController.navigationBar.backgroundColor = .blue
+    let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
+    navigationController.navigationBar.titleTextAttributes = textAttributes
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
     window?.rootViewController = navigationController

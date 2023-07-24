@@ -24,17 +24,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-F5-7Mk">
-                            <rect key="frame" x="20" y="2" width="260" height="196"/>
+                            <rect key="frame" x="20" y="10" width="260" height="180"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABC News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd8-tm-WC1" userLabel="Header">
-                                    <rect key="frame" x="0.0" y="0.0" width="260" height="113"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd8-tm-WC1" userLabel="Header">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="163.66666666666666"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                     <color key="textColor" systemColor="systemCyanColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG7-4S-Pa0" userLabel="Information">
-                                    <rect key="frame" x="0.0" y="113" width="260" height="83"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG7-4S-Pa0" userLabel="Information">
+                                    <rect key="frame" x="0.0" y="163.66666666666666" width="260" height="16.333333333333343"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -43,9 +43,9 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="dS8-F5-7Mk" firstAttribute="top" secondItem="dBJ-qb-pfv" secondAttribute="top" constant="2" id="DFO-bZ-t33"/>
+                        <constraint firstItem="dS8-F5-7Mk" firstAttribute="top" secondItem="dBJ-qb-pfv" secondAttribute="top" constant="10" id="DFO-bZ-t33"/>
                         <constraint firstItem="dS8-F5-7Mk" firstAttribute="leading" secondItem="dBJ-qb-pfv" secondAttribute="leading" constant="20" id="m7b-9e-gVw"/>
-                        <constraint firstAttribute="bottom" secondItem="dS8-F5-7Mk" secondAttribute="bottom" constant="2" id="sAl-8M-eqe"/>
+                        <constraint firstAttribute="bottom" secondItem="dS8-F5-7Mk" secondAttribute="bottom" constant="10" id="sAl-8M-eqe"/>
                         <constraint firstAttribute="trailing" secondItem="dS8-F5-7Mk" secondAttribute="trailing" constant="20" id="wXK-0T-zS1"/>
                     </constraints>
                 </view>

@@ -11,10 +11,13 @@ public struct NewsViewModel {
   
   let headerLabel: String
   let infoLabel: String?
+  let categoryLabel: String?
   
   public init(headerLabel: String,
-              infoLabel: String?) {
+              infoLabel: String?,
+              categoryLabel: String?) {
     self.headerLabel = headerLabel
     self.infoLabel = infoLabel
+    self.categoryLabel = categoryLabel
   }
 }

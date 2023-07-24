@@ -1,20 +1,20 @@
 //
-//  NewsView.swift
+//  CategoryView.swift
 //  UIComponents
 //
-//  Created by Tolga Sayan on 20.07.2023.
+//  Created by Tolga Sayan on 23.07.2023.
 //
 
 import Foundation
 import UIKit
 
-public final class NewsView: UIView {
+public final class CategoryView: UIView {
   
-  @IBOutlet private weak var headerLabel: UILabel!
-  @IBOutlet private weak var infoLabel: UILabel!
-  @IBOutlet private weak var contentView : UIView!
+  let nibName = "CategoryView"
   
-  let nibName = "NewsView"
+  @IBOutlet var contentView: UIView!
+  
+  @IBOutlet private weak var categoryButton: UIButton!
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -28,9 +28,7 @@ public final class NewsView: UIView {
   
   private func xibSetUp() {
     contentView = loadViewFromNib()
-    contentView.frame = self.bounds
-    contentView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-    addSubview(contentView)
+    contentView.layer.backgroundColor = UIColor.black.cgColor
   }
   
   func loadViewFromNib() -> UIView {
@@ -43,7 +41,7 @@ public final class NewsView: UIView {
     return UIView()
   }
   
-  public var viewModel: NewsViewModel? {
+  public var viewModel: CategoryViewModel? {
     didSet {
       guard let viewModel = viewModel else {
         isHidden = true
@@ -53,10 +51,12 @@ public final class NewsView: UIView {
     }
   }
   
-  private func initView(viewModel: NewsViewModel) {
-    self.headerLabel.text = viewModel.headerLabel
-    if let infoLabel = viewModel.infoLabel {
-      self.infoLabel.text = infoLabel
+  private func initView(viewModel: CategoryViewModel) {
+    if let categoryLabel = viewModel.categoryLabel {
+      self.categoryButton.titleLabel?.text = categoryLabel
     }
+  }
+  @IBAction func categoryButtonClick(_ sender: Any) {
+  
   }
 }
